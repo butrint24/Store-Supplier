@@ -1,0 +1,64 @@
+﻿@model StaffDetails
+
+@{
+    ViewData["Title"] = "User Details";
+}
+<div class="d-flex justify-content-sm-center">
+    <h1 class="mr-5">User Details</h1>
+</div>
+
+
+<div>
+    <dl class="row">
+        <dt class="col-2 offset-4">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-6">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2 offset-4">
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class="col-sm-2 offset-4">
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt class="col-sm-2 offset-4">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-2 offset-4">
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+        <dt class="col-sm-2 offset-4">
+            @Html.DisplayNameFor(model => model.PersonalNumber)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.PersonalNumber)
+        </dd>
+        <dt class="col-sm-2 offset-4">
+            @Html.DisplayNameFor(model => model.BranchId)
+        </dt>
+
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.BranchName)
+        </dd>
+    </dl>
+    
+    <div class="d-flex justify-content-center">
+        <form asp-action="Details">
+            <a class="btn btn-info ml-5" asp-action="Index">Back to List</a>
+        </form>
+    </div>
+    
+</div>

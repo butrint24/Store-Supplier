@@ -1,0 +1,47 @@
+﻿@model IEnumerable<AppUser>
+
+@{
+    ViewData["Title"] = "Clients";
+}
+
+<h1>Clients</h1>
+
+<table class="table table-responsive-sm table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Last Name
+            </th>
+            <th>
+                Username
+            </th>
+            <th>
+                Email
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.LastName
+            </td>
+            <td>
+                @item.UserName
+            </td>
+            <td>
+                @item.Email
+            </td>
+            <td>
+                <a class="btn btn-danger confirmDeletion m-2" asp-action="DeleteClients" asp-route-Id="@item.Id">Delete</a>
+        </tr>
+}
+    </tbody>
+</table>
